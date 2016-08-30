@@ -1,0 +1,18 @@
+﻿  jsDelta.cpp
+c:\users\james_000\documents\visual studio 2015\projects\jsdelta\jsdelta.cpp(254): warning C4244: '+=': conversion from '__int64' to 'int', possible loss of data
+c:\users\james_000\documents\visual studio 2015\projects\jsdelta\jsdelta.cpp(258): warning C4244: 'argument': conversion from 'double' to '__int64', possible loss of data
+c:\users\james_000\documents\visual studio 2015\projects\jsdelta\jsdelta.cpp(355): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\james_000\documents\visual studio 2015\projects\jsdelta\jsdelta.cpp(442): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+c:\users\james_000\documents\visual studio 2015\projects\jsdelta\jsdelta.cpp(415): warning C4101: 'dz_mtx': unreferenced local variable
+c:\users\james_000\documents\visual studio 2015\projects\jsdelta\jsdelta.cpp(413): warning C4101: 'dx_mtx': unreferenced local variable
+c:\users\james_000\documents\visual studio 2015\projects\jsdelta\jsdelta.cpp(416): warning C4101: 'dw_mtx': unreferenced local variable
+c:\users\james_000\documents\visual studio 2015\projects\jsdelta\jsdelta.cpp(414): warning C4101: 'dy_mtx': unreferenced local variable
+c:\users\james_000\documents\visual studio 2015\projects\jsdelta\jsdelta.cpp(571): warning C4018: '<': signed/unsigned mismatch
+c:\users\james_000\documents\visual studio 2015\projects\jsdelta\jsdelta.cpp(810): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\james_000\documents\visual studio 2015\projects\jsdelta\jsdelta.cpp(810): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\james_000\documents\visual studio 2015\projects\jsdelta\jsdelta.cpp(811): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\james_000\documents\visual studio 2015\projects\jsdelta\jsdelta.cpp(811): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+c:\users\james_000\documents\visual studio 2015\projects\jsdelta\jsdelta.cpp(812): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+c:\users\james_000\documents\visual studio 2015\projects\jsdelta\jsdelta.cpp(812): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  jsDelta.vcxproj -> C:\Users\james_000\Documents\Visual Studio 2015\Projects\jsDelta\x64\Debug\jsDelta.mll
+  jsDelta.vcxproj -> C:\Users\james_000\Documents\Visual Studio 2015\Projects\jsDelta\x64\Debug\jsDelta.pdb (Full PDB)

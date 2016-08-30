@@ -1,0 +1,25 @@
+﻿  common.cpp
+  jsDelta.cpp
+jsDelta.cpp(232): warning C4244: '+=': conversion from '__int64' to 'int', possible loss of data
+jsDelta.cpp(236): warning C4244: 'argument': conversion from 'double' to '__int64', possible loss of data
+jsDelta.cpp(359): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+jsDelta.cpp(446): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+jsDelta.cpp(419): warning C4101: 'dz_mtx': unreferenced local variable
+jsDelta.cpp(417): warning C4101: 'dx_mtx': unreferenced local variable
+jsDelta.cpp(420): warning C4101: 'dw_mtx': unreferenced local variable
+jsDelta.cpp(418): warning C4101: 'dy_mtx': unreferenced local variable
+jsDelta.cpp(575): warning C4018: '<': signed/unsigned mismatch
+jsDelta.cpp(811): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+jsDelta.cpp(811): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+jsDelta.cpp(812): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+jsDelta.cpp(812): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+jsDelta.cpp(813): warning C4267: 'argument': conversion from 'size_t' to 'unsigned int', possible loss of data
+jsDelta.cpp(813): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+  jsDeltaCmd.cpp
+  pluginMain.cpp
+     Creating library C:\Users\james_000\Documents\Visual Studio 2015\Projects\jsDelta\x64\Release\jsDelta.lib and object C:\Users\james_000\Documents\Visual Studio 2015\Projects\jsDelta\x64\Release\jsDelta.exp
+  Generating code
+  All 347 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  jsDelta.vcxproj -> C:\Users\james_000\Documents\Visual Studio 2015\Projects\jsDelta\x64\Release\jsDelta.mll
+  jsDelta.vcxproj -> C:\Users\james_000\Documents\Visual Studio 2015\Projects\jsDelta\x64\Release\jsDelta.pdb (Full PDB)
