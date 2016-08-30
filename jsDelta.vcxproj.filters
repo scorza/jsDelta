@@ -43,5 +43,8 @@
     <None Include="jsDelta.cl">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="LICENSE">
+      <Filter>Source Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
