@@ -34,11 +34,11 @@ MStatus JSDelta::initialize() {
 	MFnNumericAttribute fnNumAttr;
 	MFnTypedAttribute fnTypAttr;
 
-	aAutoKickGPU = fnNumAttr.create("autoKickGPU", "autoKickGPU", MFnNumericData::kBoolean, false);
-	fnNumAttr.setKeyable(true);
-	fnNumAttr.setStorable(true);
-	addAttribute(aAutoKickGPU);
-	attributeAffects(aAutoKickGPU, outputGeom);
+	//aAutoKickGPU = fnNumAttr.create("autoKickGPU", "autoKickGPU", MFnNumericData::kBoolean, false);
+	//fnNumAttr.setKeyable(true);
+	//fnNumAttr.setStorable(true);
+	//addAttribute(aAutoKickGPU);
+	//attributeAffects(aAutoKickGPU, outputGeom);
 	
 	aSmoothIterations = fnNumAttr.create("smoothIterations", "smoothIterations", MFnNumericData::kInt, 20);
 	fnNumAttr.setKeyable(true);
@@ -83,7 +83,7 @@ MStatus JSDelta::deform(MDataBlock& data, MItGeometry& iterGeo,
 	// Get simple values from datablock
 	float env = data.inputValue(envelope).asFloat();
 	unsigned int smoothIterations = data.inputValue(aSmoothIterations).asInt();
-	bool kick = data.outputValue(aAutoKickGPU).asBool();
+	//bool kick = data.outputValue(aAutoKickGPU).asBool();
 	bool isConnected = data.outputValue(aIsConnected).asBool();
 
 	// Get weight values to store as static member variable
@@ -226,22 +226,22 @@ MStatus JSDelta::deform(MDataBlock& data, MItGeometry& iterGeo,
 	Tangent_TBB kernel(pts_PTR, smooth_PTR, final_PTR, delta_PTR, adjMap_, weights_, env);
 	tbb::parallel_for(tbb::blocked_range<size_t>(0, numPoints_, 2000), kernel);
 		
-	//// Basic algorithm, here for backup and posterity
-	//for (unsigned int i = 0; i < numPoints_; ++i) {
-	//	MMatrix tangentMatrix = GetTangentMatrix(smoothDeformPoints_[i],
-	//											 smoothDeformPoints_[adjMap_[i][0]],
-	//											 smoothDeformPoints_[adjMap_[i][1]]);
-	//	MVector delta = deltas_[i];
-	//	MPoint currentPt = currentPts[i];
-	//	MPoint finalPt = smoothDeformPoints_[i];
+	// Basic algorithm, here for backup and posterity
+	for (unsigned int i = 0; i < numPoints_; ++i) {
+		MMatrix tangentMatrix = GetTangentMatrix(smoothDeformPoints_[i],
+												 smoothDeformPoints_[adjMap_[i][0]],
+												 smoothDeformPoints_[adjMap_[i][1]]);
+		MVector delta = deltas_[i];
+		MPoint currentPt = currentPts[i];
+		MPoint finalPt = smoothDeformPoints_[i];
 
-	//	delta *= tangentMatrix;
-	//	finalPt += delta;
+		delta *= tangentMatrix;
+		finalPt += delta;
 
-	//	finalPt = finalPt + ((finalPt - currentPt) *  env);
+		finalPt = finalPt + ((finalPt - currentPt) *  env);
 
-	//	finalPoints_[i] = finalPt;
-	//}
+		finalPoints_[i] = finalPt;
+	}
 		
 	auto t1 = Clock::now(); ////////////////////////////////////////////////////////////////
 
